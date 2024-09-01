@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  /* border: 20px solid teal; */
+
+  height: 100vh;
+
+  display: flex;
+}
+
+.container {
+  border: 2px solid red;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1em;
+
+  margin: auto;
+}
+
+#left {
+  border: 2px solid gold;
+}
+
+#left a {
+  margin-left: auto;
+}
+
+label {
+  border: 2px solid red;
+}
+
+input {
+  border: 1px solid black;
+  display: block;
+
+  padding: 1em;
+
+  height: 3em;
+  width: 20em;
+
+  border-radius: 1em;
+}

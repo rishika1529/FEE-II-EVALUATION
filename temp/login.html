@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignIn/LogIn</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <!-- ----LEFT---- -->
+        <div id="left">
+          <img
+            src="images/chitkara-university-logo.png"
+            alt="chitkara logo"
+            id="chitkara-logo"
+          />
+          <h1>Welcome Back!</h1>
+          <p>PLease enter SignIn details below</p>
+
+          <form action="">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="abc@gmail.com"
+            />
+            <br />
+            <label for="password">Password</label>
+            <input type="password" name="passworddd" id="password" />
+            <br />
+            <a href="#" id="forgotPwd">Forgot password?</a>
+            <br />
+            <button type="submit" id="signIn">Sign In</button>
+            <p>Or continue</p>
+
+            <button type="button" id="loginWithGoogle">
+              <img src="images/google.png" alt="google logo" id="google-logo" />
+              <p>Log in with Google</p>
+            </button>
+          </form>
+        </div>
+
+        <!-- ----RIGHT---- -->
+        <img src="images/logIn.jpeg" alt="login bg" id="login-image" />
+      </div>
+    </section>
+  </body>
+</html>

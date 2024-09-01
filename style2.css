@@ -1,0 +1,242 @@
+/* ----SECTION FOUR---- */
+#four {
+  background-color: red;
+  color: white;
+  padding: 2em 0;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+}
+
+#four .container {
+  /* border: 2px solid red; */
+
+  flex-wrap: wrap;
+  a {
+    color: white;
+  }
+}
+
+.report {
+  /* border: 2px solid hotpink; */
+
+  background-color: rgba(0, 0, 0, 0.194);
+
+  width: 49%;
+  margin: 0.5em 0;
+  padding: 1em;
+
+  font-size: 1.5em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.report a:nth-child(2) {
+  margin-right: auto;
+  margin-left: 1em;
+}
+
+/* ----SECTION FIVE---- */
+#five {
+  /* border: 2px solid rebeccapurple; */
+
+  padding: 2.5em 0;
+}
+
+#five .container {
+  flex-direction: column;
+  gap: 2em;
+}
+
+#five .message {
+  /* border: 2px solid red; */
+
+  display: flex;
+  padding: 2em 1em;
+}
+
+#five .message:nth-child(1) .messageDesc {
+  padding-right: 2.5em;
+}
+
+#five .message:nth-child(2) .messageDesc {
+  padding-left: 2.5em;
+}
+
+#five h1,
+.pos {
+  font-size: 2.2em;
+}
+
+.msg {
+  margin: 1em 0;
+  font-size: 1.4em;
+
+  span {
+    color: red;
+    font-weight: 900;
+  }
+}
+
+#five .message:last-child {
+  flex-direction: row-reverse;
+}
+
+/* ----SECTION SIX---- */
+#six {
+  margin: 1em 0;
+  padding: 1em 0 4.5em 0;
+}
+
+#six .container {
+  flex-direction: column;
+}
+
+#six h1 {
+  border-top: 1px solid red;
+  /* border: 1px solid red; */
+  padding: 1em 0;
+  font-size: 2em;
+}
+
+.questions {
+  /* border: 2px solid red; */
+
+  padding: 1em;
+
+  background-color: rgb(255, 0, 0);
+  margin: 0.5em 0;
+
+  font-size: 1.2em;
+  font-weight: 600;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.active {
+  max-height: 100%;
+  overflow: auto;
+  margin-top: 1em;
+  transition: all 0.6s ease;
+}
+
+/* ---QUICK LINKS---- */
+#quickLinks {
+  /* border: 2px solid teal; */
+
+  background-color: rgba(206, 146, 35, 0.313);
+  padding: 2em 0;
+  /* color: white; */
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  ul {
+    list-style: none;
+  }
+}
+
+#quickLinks .ql {
+  /* border: 2px solid fuchsia; */
+
+  /* width: 100%; */
+  padding: 0.4em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  h1 {
+    font-size: 1.5em;
+    padding: 1.2rem 0;
+    color: red;
+  }
+
+  li {
+    padding: 0.3em 0;
+  }
+
+  i {
+    margin-right: 0.5em;
+  }
+
+  img {
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: black;
+  }
+
+  .info {
+    /* border: 2px solid; */
+
+    padding: 0.3em 0;
+  }
+}
+
+#quickLinks .socials {
+  /* border: 2px solid red; */
+
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  /* gap: 1.5em; */
+
+  .social {
+    /* border: 2px solid blue; */
+
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+#quickLinks a i:hover {
+  color: red;
+}
+
+/* ----FOOTER---- */
+footer {
+  background-color: rgba(206, 146, 35, 0.313);
+
+  background-color: black;
+  color: white;
+}
+
+footer .container {
+  padding: 10px;
+  max-width: 97%;
+}
+
+/* ----Go Up Button---- */
+#goUpBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  background-color: #000;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 17.5px;
+  border-radius: 50%;
+  transition: all 1s;
+}
+
+#goUpBtn:hover {
+  background-color: #555; /* Darker background on hover */
+}
