@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses - Placement Cell</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        * {
+        /* * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -22,8 +23,6 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: #ff0000; /* Red header color */
-            color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 1000;
             padding: 1.2em 0;
@@ -72,7 +71,7 @@
         }
 
         #navMenu a:hover {
-            color: #ffcccb; /* Light red hover effect */
+            color: #ffcccb; 
         }
 
         #navMenu i {
@@ -82,12 +81,94 @@
             border-radius: 50%;
             font-size: 1.2em;
         }
+*/
+        
 
-        .container {
+        * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  /* border: 2px solid red; */
+
+  max-width: 90%;
+  margin: auto;
+  padding: 1em;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ----NAVBAR---- */
+nav .container {
+  max-width: 98%;
+}
+
+nav {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-shadow: 1px -40px 100px black;
+
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+}
+
+#navTitle {
+  /* border: 2px solid gold; */
+
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 9rem;
+    margin-right: 1em;
+  }
+
+  span {
+    font-size: 1.3em;
+  }
+}
+
+#navMenu {
+  /* border: 2px solid rgb(46, 192, 46); */
+
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+
+  a {
+    color: black;
+  }
+}
+
+#navMenuItems:hover {
+  a {
+    color: red;
+  }
+}
+
+#navMenuItems i {
+  color: white;
+  background-color: red;
+  padding: 1em 1.1em;
+  border-radius: 50%;
+}
+
+.container_ {
             max-width: 80%;
             margin: 0 auto;
-            padding-top: 120px; /* Adjusted top padding for fixed header */
-        }
+            padding-top: 120px; 
+        } 
 
         .courses-header {
             text-align: center;
@@ -163,7 +244,7 @@
 <body>
 
     <!-- ----NAVBAR---- -->
-    <nav>
+    <!-- <nav>
         <div class="container">
             <div id="navTitle">
                 <img src="images/chitkara-university-logo.png" alt="Chitkara University Logo">
@@ -179,9 +260,31 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+     <!-- ----NAVBAR---- -->
+     <nav>
+        <div class="container">
+          <div id="navTitle">
+            <img
+              src="images/chitkara-university-logo.png"
+              alt="chitkara university logo"
+            />
+            <span>Placement Cell, Chitkara Univeristy</span>
+          </div>
+          <ul id="navMenu">
+            <li id="navMenuItems"><a href="#">Courses</a></li>
+            <li id="navMenuItems"><a href="#">Why Recruit</a></li>
+            <li id="navMenuItems"><a href="#">Recruitment process</a></li>
+            <li id="navMenuItems"><a href="#">Contact Us</a></li>
+            <li id="navMenuItems">
+              <a href="user.html"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
 
-    <div class="container">
+    <div class="container_">
         <div class="courses-header">
             <h1>Courses to Help You Get Placed</h1>
             <p>Explore our curated list of courses designed to enhance your skills and boost your chances of securing a job.</p>
