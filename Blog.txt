@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories - Placement Cell | Chitkara University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+            scroll-behavior: smooth; /* Smooth scroll */
+        }
+        .header, .footer {
+            background-color: rgb(255,0,0); /* Red */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before, .footer::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 200%;
+            height: 10px;
+            background: #fff;
+            top: 0;
+            left: -50%;
+            transform: skewX(-45deg);
+            transition: transform 0.3s ease;
+        }
+        .header:hover::before, .footer:hover::before {
+            transform: skewX(0deg);
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .container:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .container h1 {
+            color: rgb(255,0,0); /* Red */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .story {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #c8102e; /* Red */
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .story:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .story img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+        .story img:hover {
+            transform: scale(1.1);
+        }
+        .story h2 {
+            color: #333;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        .story p {
+            line-height: 1.6;
+            margin: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            margin-top: 20px;
+        }
+        a {
+            color: #c8102e; /* Red */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Chitkara University Placement Cell</h1>
+    </div>
+    
+    <div class="container">
+        <h1>Weekly Blog </h1>
+        
+        <div class="story">
+            <img src="https://via.placeholder.com/120" alt="John Doe">
+            <div>
+                <h2>Rohit - Software Engineer at Google</h2>
+                <p>Rohit, a recent graduate in Computer Science, has successfully secured a position as a Software Engineer at Google. During his time at Chitkara University, John excelled in his studies and participated in several coding competitions. His dedication and hard work paid off, and he was selected for Google through a campus recruitment drive. John attributes his success to the rigorous training and support provided by the Placement Cell.</p>
+            </div>
+        </div>
+        
+        <div class="story">
+            <img src="https://via.placeholder.com/120" alt="Jane Smith">
+            <div>
+                <h2>Akshit - Marketing Manager at Unilever</h2>
+                <p>Akshit graduated with a degree in Business Administration and landed a coveted role as a Marketing Manager at Unilever. Jane was an active participant in various marketing workshops and internships offered by the Placement Cell. Her proactive approach and the skills she developed through these programs helped her stand out during the selection process. Jane's story is a testament to the effectiveness of the university's placement initiatives.</p>
+            </div>
+        </div>
+        
+        <div class="story">
+            <img src="https://via.placeholder.com/120" alt="Michael Brown">
+            <div>
+                <h2>Michael  - Data Analyst at Amazon</h2>
+                <p>Michael , a graduate in Data Science, has achieved his dream of working as a Data Analyst at Amazon. Michael was involved in numerous projects and internships facilitated by the Placement Cell, which provided him with valuable industry experience. His analytical skills and practical knowledge were key factors in securing his position at Amazon. Michael's journey showcases the impact of hands-on experience and career guidance.</p>
+            </div>
+        </div>
+        
+        <div class="story">
+            <img src="https://via.placeholder.com/120" alt="Emily Johnson">
+            <div>
+                <h2>Emily  - Financial Analyst at Goldman Sachs</h2>
+                <p>Emily journey from Chitkara University to a Financial Analyst position at Goldman Sachs is truly inspiring. With a degree in Finance, Emily participated in various financial modeling workshops and networking events organized by the Placement Cell. Her preparation and networking skills played a crucial role in landing her role at Goldman Sachs. Emily's success highlights the importance of industry connections and continuous learning.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2024 Chitkara University. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
