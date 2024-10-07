@@ -88,8 +88,7 @@
         border-radius: 50%;
       }
       /*--------------*/
-      .header,
-      .footer {
+      .header {
         background-color: rgb(255, 0, 0); /* Red */
         color: #fff;
         padding: 20px 0;
@@ -97,8 +96,7 @@
         position: relative;
         overflow: hidden;
       }
-      .header::before,
-      .footer::before {
+      .header::before {
         content: "";
         display: block;
         position: absolute;
@@ -110,8 +108,7 @@
         transform: skewX(-45deg);
         transition: transform 0.3s ease;
       }
-      .header:hover::before,
-      .footer:hover::before {
+      .header:hover::before {
         transform: skewX(0deg);
       }
       .container {
@@ -122,6 +119,8 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: box-shadow 0.3s ease;
+
+        margin-top: 5em;
       }
       .container:hover {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -165,12 +164,21 @@
         line-height: 1.6;
         margin: 0;
       }
-      .footer {
-        text-align: center;
-        padding: 20px;
-        position: relative;
-        margin-top: 20px;
+      /* ----FOOTER---- */
+      footer {
+        font-family: "Times New Roman", Times, serif;
+
+        background-color: rgba(206, 146, 35, 0.313);
+
+        background-color: black;
+        color: white;
       }
+
+      footer .container_ {
+        padding: 10px;
+        max-width: 97%;
+      }
+
       a {
         color: #c8102e; /* Red */
         text-decoration: none;
@@ -271,8 +279,11 @@
       </div>
     </div>
 
-    <div class="footer">
-      <p>&copy; 2024 Chitkara University. All Rights Reserved.</p>
-    </div>
+    <footer>
+      <div class="container_">
+        <p>Copyright © 2024 Placement cell, Chitkara University</p>
+        <p>Design & Developed by Rishika, Vansh Kwatra, Shreya Sharma</p>
+      </div>
+    </footer>
   </body>
 </html>

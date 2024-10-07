@@ -148,6 +148,12 @@ nav {
   span {
     font-size: 1.3em;
   }
+  a {
+    color: black;
+  }
+  a:hover {
+    color: red;
+  }
 }
 
 #navMenu {

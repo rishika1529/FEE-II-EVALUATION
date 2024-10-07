@@ -46,8 +46,9 @@ nav {
     margin-right: 1em;
   }
 
-  span {
+  a {
     font-size: 1.3em;
+    color: black;
   }
 }
 
@@ -125,6 +126,7 @@ nav {
 
   padding: 1.5em;
   width: 17rem;
+  height: 160px;
   margin: auto;
   border-left: 0.5px solid rgb(255, 2, 2);
 
@@ -215,4 +217,30 @@ nav {
 #call:hover,
 #wa:hover {
   margin-right: 0;
+}
+
+/* ----MEDIA QUERIES---- */
+@media (width <= 950px) {
+  /* ----SECTION TWO---- */
+  #two .container {
+    flex-direction: column;
+
+    .twoInfo:nth-child(1) {
+      border-top: 0.5px solid red;
+    }
+
+    .twoInfo {
+      width: 70%;
+
+      border: none;
+      border-bottom: 0.5px solid red;
+    }
+  }
+
+  /* ----SECTION THREE---- */
+  #three .container {
+    h1 {
+      width: 100%;
+    }
+  }
 }
