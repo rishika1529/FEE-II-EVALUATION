@@ -1,0 +1,98 @@
+/* ----MEDIA QUERIES---- */
+
+@media (width <= 1090px) {
+  .navMenu {
+    position: absolute;
+
+    top: 5em;
+
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    left: 0;
+    padding: 1em;
+    background-color: rgb(243, 242, 242);
+
+    display: none;
+  }
+
+  nav .container .menuIcon {
+    display: block;
+
+    /* border: 2px solid red; */
+
+    position: absolute;
+    right: 1em;
+
+    padding: 1em;
+  }
+
+  .menuIcon:hover {
+    cursor: pointer;
+  }
+
+  .hide {
+    display: flex;
+  }
+}
+
+@media (width <= 900px) {
+  /* ----ONE---- */
+  #one .container p {
+    margin-right: 0;
+  }
+
+  /* ----TWO---- */
+  #two .container {
+    flex-wrap: wrap;
+
+    .twoInfo:nth-child(1),
+    .twoInfo:nth-child(2) {
+      border-top: 1px solid red;
+    }
+
+    .twoInfo {
+      border: none;
+      border-bottom: 1px solid red;
+    }
+  }
+
+  /* ---THREE---- */
+  #three .container h1 {
+    width: 100%;
+  }
+
+  /* ----FOUR---- */
+  #four .container {
+    flex-direction: column;
+
+    .report {
+      width: 100%;
+    }
+  }
+
+  /* ----FIVE---- */
+  #five .container {
+    .message {
+      flex-direction: column;
+      padding: 0;
+
+      .messageDesc {
+        padding: 0;
+      }
+    }
+  }
+
+  /* ----QUICK LINKS---- */
+  #quickLinks .container {
+    flex-wrap: wrap;
+    /* background-color: aqua; */
+
+    .ql {
+      /* border: 2px solid red; */
+    }
+  }
+}

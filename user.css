@@ -156,7 +156,11 @@ nav {
   }
 }
 
-#navMenu {
+.menuIcon {
+  display: none;
+}
+
+.navMenu {
   /* border: 2px solid rgb(46, 192, 46); */
 
   list-style: none;
@@ -181,4 +185,45 @@ nav {
   background-color: red;
   padding: 1em 1.1em;
   border-radius: 50%;
+}
+
+/* ----MEDIA QUERIES---- */
+
+@media (width <= 1090px) {
+  .navMenu {
+    position: absolute;
+
+    top: 5em;
+
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    left: 0;
+    padding: 1em;
+    background-color: rgb(243, 242, 242);
+
+    display: none;
+  }
+
+  nav .container .menuIcon {
+    display: block;
+
+    /* border: 2px solid red; */
+
+    position: absolute;
+    right: 1em;
+
+    padding: 1em;
+  }
+
+  .menuIcon:hover {
+    cursor: pointer;
+  }
+
+  .hide {
+    display: flex;
+  }
 }

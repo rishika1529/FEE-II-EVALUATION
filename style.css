@@ -24,6 +24,10 @@ nav .container {
   max-width: 98%;
 }
 
+.menuIcon {
+  display: none;
+}
+
 nav {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   box-shadow: 1px -40px 100px black;
@@ -52,9 +56,8 @@ nav {
   }
 }
 
-#navMenu {
+.navMenu {
   /* border: 2px solid rgb(46, 192, 46); */
-
   list-style: none;
 
   display: flex;
@@ -200,10 +203,10 @@ nav {
   i {
     padding: 1em;
   }
-  width: 25%;
+  width: 22rem;
   transition: all 0.3s linear;
 
-  margin-right: calc(-21%);
+  margin-right: calc(-18.5rem);
 
   a {
     color: white;
@@ -217,30 +220,4 @@ nav {
 #call:hover,
 #wa:hover {
   margin-right: 0;
-}
-
-/* ----MEDIA QUERIES---- */
-@media (width <= 950px) {
-  /* ----SECTION TWO---- */
-  #two .container {
-    flex-direction: column;
-
-    .twoInfo:nth-child(1) {
-      border-top: 0.5px solid red;
-    }
-
-    .twoInfo {
-      width: 70%;
-
-      border: none;
-      border-bottom: 0.5px solid red;
-    }
-  }
-
-  /* ----SECTION THREE---- */
-  #three .container {
-    h1 {
-      width: 100%;
-    }
-  }
 }

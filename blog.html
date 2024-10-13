@@ -22,74 +22,9 @@
         scroll-behavior: smooth;
       }
 
-      /* ----NAVBAR---- */
-      .container_ {
-        /* border: 2px solid red; */
-
-        max-width: 90%;
-        margin: auto;
-        padding: 0.3em;
-
-        display: flex;
-        justify-content: space-between;
-      }
-
-      nav {
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-        box-shadow: 1px -40px 100px black;
-
-        position: fixed;
-        top: 0;
-        z-index: 1;
-        background-color: white;
-        width: 100%;
-      }
-
-      #navTitle {
-        /* border: 2px solid gold; */
-
-        display: flex;
-        align-items: center;
-
-        img {
-          width: 9rem;
-          margin-right: 1em;
-        }
-
-        span {
-          font-size: 1.3em;
-        }
-      }
-
-      #navMenu {
-        /* border: 2px solid rgb(46, 192, 46); */
-
-        list-style: none;
-
-        display: flex;
-        align-items: center;
-        gap: 1.2em;
-
-        a {
-          color: black;
-        }
-      }
-
-      #navMenuItems:hover {
-        a {
-          color: red;
-        }
-      }
-
-      #navMenuItems i {
-        color: white;
-        background-color: red;
-        padding: 1em 1.1em;
-        border-radius: 50%;
-      }
       /*--------------*/
       .header {
-        background-color: rgb(255, 0, 0); /* Red */
+        background-color: rgb(255, 0, 0);
         color: #fff;
         padding: 20px 0;
         text-align: center;
@@ -120,13 +55,13 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: box-shadow 0.3s ease;
 
-        margin-top: 5em;
+        margin-top: 6em;
       }
       .container:hover {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
       .container h1 {
-        color: rgb(255, 0, 0); /* Red */
+        color: rgb(255, 0, 0);
         text-align: center;
         margin-bottom: 30px;
       }
@@ -135,7 +70,7 @@
         align-items: center;
         margin-bottom: 20px;
         padding: 15px;
-        border-left: 5px solid #c8102e; /* Red */
+        border-left: 5px solid #c8102e;
         background-color: #f9f9f9;
         border-radius: 8px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -164,7 +99,6 @@
         line-height: 1.6;
         margin: 0;
       }
-      /* ----FOOTER---- */
       footer {
         font-family: "Times New Roman", Times, serif;
 
@@ -180,16 +114,138 @@
       }
 
       a {
-        color: #c8102e; /* Red */
+        color: #c8102e;
         text-decoration: none;
       }
-      /*a:hover {
-        text-decoration: underline;
-      }*/
+
+      /*--------*/
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      .container_ {
+        /* border: 2px solid red; */
+
+        max-width: 90%;
+        margin: auto;
+        padding: 1em;
+
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* ----NAVBAR---- */
+      nav .container_ {
+        max-width: 98%;
+      }
+
+      .menuIcon {
+        display: none;
+      }
+
+      nav {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        box-shadow: 1px -40px 100px black;
+
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background-color: white;
+        width: 100%;
+      }
+
+      #navTitle {
+        /* border: 2px solid gold; */
+
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 9rem;
+          margin-right: 1em;
+        }
+
+        a {
+          font-size: 1.3em;
+          color: black;
+        }
+      }
+
+      .navMenu {
+        /* border: 2px solid rgb(46, 192, 46); */
+        list-style: none;
+
+        display: flex;
+        align-items: center;
+        gap: 1.2em;
+
+        a {
+          color: black;
+        }
+      }
+
+      #navMenuItems:hover {
+        a {
+          color: red;
+        }
+      }
+
+      #navMenuItems i {
+        color: white;
+        background-color: red;
+        padding: 1em 1.1em;
+        border-radius: 50%;
+      }
+
+      /* ----MEDIA QUERIES---- */
+      @media (width <= 1090px) {
+        .navMenu {
+          position: absolute;
+
+          top: 5em;
+
+          /* border: 2px solid red; */
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+
+          left: 0;
+          padding: 1em;
+          background-color: rgb(243, 242, 242);
+
+          display: none;
+        }
+
+        nav .container_ .menuIcon {
+          display: block;
+
+          /* border: 2px solid red; */
+
+          position: absolute;
+          right: 1em;
+
+          padding: 1em;
+        }
+
+        .menuIcon:hover {
+          cursor: pointer;
+        }
+
+        .hide {
+          display: flex;
+        }
+      }
     </style>
   </head>
   <body>
     <!-- ----NAVBAR---- -->
+
     <nav>
       <div class="container_">
         <div id="navTitle">
@@ -197,17 +253,18 @@
             src="images/chitkara-university-logo.png"
             alt="chitkara university logo"
           />
-          <span>Placement Cell, Chitkara Univeristy</span>
+          <a href="index.html">Placement Cell, Chitkara Univeristy</a>
         </div>
-        <ul id="navMenu">
+        <ul class="navMenu">
           <li id="navMenuItems"><a href="courses.html">Courses</a></li>
           <li id="navMenuItems"><a href="#">Why Recruit</a></li>
           <li id="navMenuItems"><a href="#">Recruitment process</a></li>
-          <li id="navMenuItems"><a href="blog.html">About Us</a></li>
+          <li id="navMenuItems"><a href="blog.html">Blog</a></li>
           <li id="navMenuItems">
             <a href="user.html"><i class="fa-solid fa-user"></i></a>
           </li>
         </ul>
+        <div class="menuIcon"><i class="fa-solid fa-bars fa-xl menui"></i></div>
       </div>
     </nav>
 
@@ -285,5 +342,30 @@
         <p>Design & Developed by Rishika, Vansh Kwatra, Shreya Sharma</p>
       </div>
     </footer>
+
+    <script>
+      // NAVBAR MENU
+      const menuIcon = document.querySelector(".menuIcon");
+      const menuList = document.querySelector(".navMenu");
+      menuIcon.addEventListener("click", function () {
+        menuList.classList.toggle("hide");
+        // console.log(menuList);
+        // console.log("click");
+      });
+
+      const menu_i = document.querySelector(".menui");
+      document.addEventListener("click", function (e) {
+        // console.log(e.target);
+        if (
+          e.target !== menuList &&
+          e.target !== menuIcon &&
+          e.target !== menu_i &&
+          menuList.classList.contains("hide")
+        ) {
+          // console.log("here");
+          menuList.classList.toggle("hide");
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,322 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Courses - Placement Cell</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
-        /* * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .container {
+        /* border: 2px solid red; */
+
+        max-width: 90%;
+        margin: auto;
+        padding: 1em;
+
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* ----NAVBAR---- */
+      nav .container {
+        max-width: 98%;
+      }
+
+      nav {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        box-shadow: 1px -40px 100px black;
+
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background-color: white;
+        width: 100%;
+      }
+
+      #navTitle {
+        /* border: 2px solid gold; */
+
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 9rem;
+          margin-right: 1em;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+        span {
+          font-size: 1.3em;
         }
 
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            padding: 1.2em 0;
+        a {
+          color: black;
         }
 
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2em;
+        a:hover {
+          color: red;
+        }
+      }
+
+      .navMenu {
+        /* border: 2px solid rgb(46, 192, 46); */
+
+        list-style: none;
+
+        display: flex;
+        align-items: center;
+        gap: 1.2em;
+
+        a {
+          color: black;
+        }
+      }
+
+      .menuIcon {
+        display: none;
+      }
+
+      #navMenuItems:hover {
+        a {
+          color: red;
+        }
+      }
+
+      #navMenuItems i {
+        color: white;
+        background-color: red;
+        padding: 1em 1.1em;
+        border-radius: 50%;
+      }
+
+      .container_ {
+        max-width: 80%;
+        margin: 0 auto;
+        padding-top: 120px;
+      }
+
+      .courses-header {
+        text-align: center;
+        margin-bottom: 3em;
+      }
+
+      .courses-header h1 {
+        font-size: 2.5em;
+        color: #ff0000;
+        margin-bottom: 0.5em;
+      }
+
+      .courses-header p {
+        font-size: 1.2em;
+        color: #555;
+      }
+
+      .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2em;
+      }
+
+      .course-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 2em;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .course-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .course-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 1em;
+        border-radius: 8px;
+      }
+
+      .course-card h2 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+        color: #333;
+      }
+
+      .course-card p {
+        font-size: 1em;
+        line-height: 1.6;
+        color: #666;
+      }
+
+      .course-card a {
+        display: inline-block;
+        margin-top: 1em;
+        color: #ff0000;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .course-card a:hover {
+        text-decoration: underline;
+      }
+
+      /* ----MEDIA QUERIES---- */
+
+      @media (width <= 1090px) {
+        .navMenu {
+          position: absolute;
+
+          top: 5em;
+
+          /* border: 2px solid red; */
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+
+          left: 0;
+          padding: 1em;
+          background-color: rgb(243, 242, 242);
+
+          display: none;
         }
 
-        #navTitle {
-            display: flex;
-            align-items: center;
+        nav .container .menuIcon {
+          display: block;
+
+          /* border: 2px solid red; */
+
+          position: absolute;
+          right: 1em;
+
+          padding: 1em;
         }
 
-        #navTitle img {
-            width: 60px;
-            height: auto;
-            margin-right: 1em;
+        .menuIcon:hover {
+          cursor: pointer;
         }
 
-        #navTitle span {
-            font-size: 1.6em;
-            font-weight: bold;
+        .hide {
+          display: flex;
         }
-
-        #navMenu {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 2em;
-        }
-
-        #navMenu li {
-            position: relative;
-        }
-
-        #navMenu a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            padding: 0.5em 1em;
-            transition: color 0.3s;
-        }
-
-        #navMenu a:hover {
-            color: #ffcccb; 
-        }
-
-        #navMenu i {
-            color: white;
-            background-color: red;
-            padding: 0.5em;
-            border-radius: 50%;
-            font-size: 1.2em;
-        }
-*/
-        
-
-        * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  /* border: 2px solid red; */
-
-  max-width: 90%;
-  margin: auto;
-  padding: 1em;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-/* ----NAVBAR---- */
-nav .container {
-  max-width: 98%;
-}
-
-nav {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  box-shadow: 1px -40px 100px black;
-
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  background-color: white;
-  width: 100%;
-}
-
-#navTitle {
-  /* border: 2px solid gold; */
-
-  display: flex;
-  align-items: center;
-
-  img {
-    width: 9rem;
-    margin-right: 1em;
-  }
-
-  span {
-    font-size: 1.3em;
-  }
-
-  a {
-    color: black;
-  }
-
-  a:hover {
-    color: red;
-  }
-}
-
-#navMenu {
-  /* border: 2px solid rgb(46, 192, 46); */
-
-  list-style: none;
-
-  display: flex;
-  align-items: center;
-  gap: 1.2em;
-
-  a {
-    color: black;
-  }
-}
-
-#navMenuItems:hover {
-  a {
-    color: red;
-  }
-}
-
-#navMenuItems i {
-  color: white;
-  background-color: red;
-  padding: 1em 1.1em;
-  border-radius: 50%;
-}
-
-.container_ {
-            max-width: 80%;
-            margin: 0 auto;
-            padding-top: 120px; 
-        } 
-
-        .courses-header {
-            text-align: center;
-            margin-bottom: 3em;
-        }
-
-        .courses-header h1 {
-            font-size: 2.5em;
-            color: #ff0000;
-            margin-bottom: 0.5em;
-        }
-
-        .courses-header p {
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        .courses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2em;
-        }
-
-        .course-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 2em;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .course-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .course-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            margin-bottom: 1em;
-            border-radius: 8px;
-        }
-
-        .course-card h2 {
-            font-size: 1.5em;
-            margin-bottom: 0.5em;
-            color: #333;
-        }
-
-        .course-card p {
-            font-size: 1em;
-            line-height: 1.6;
-            color: #666;
-        }
-
-        .course-card a {
-            display: inline-block;
-            margin-top: 1em;
-            color: #ff0000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .course-card a:hover {
-            text-decoration: underline;
-        }
-
+      }
     </style>
-</head>
-<body>
-     <!-- ----NAVBAR---- -->
-     <nav>
-        <div class="container">
-          <div id="navTitle">
-            <img
-              src="images/chitkara-university-logo.png"
-              alt="chitkara university logo"
-            />
-            <a href="index.html"><span>Placement Cell, Chitkara Univeristy</span></a>
-          </div>
-          <ul id="navMenu">
-            <li id="navMenuItems"><a href="#">Courses</a></li>
-            <li id="navMenuItems"><a href="#">Why Recruit</a></li>
-            <li id="navMenuItems"><a href="#">Recruitment process</a></li>
-            <li id="navMenuItems"><a href="blog.html">About Us</a></li>
-            <li id="navMenuItems">
-              <a href="user.html"><i class="fa-solid fa-user"></i></a>
-            </li>
-          </ul>
+  </head>
+  <body>
+    <!-- ----NAVBAR---- -->
+    <nav>
+      <div class="container">
+        <div id="navTitle">
+          <img
+            src="images/chitkara-university-logo.png"
+            alt="chitkara university logo"
+          />
+          <a href="index.html"
+            ><span>Placement Cell, Chitkara Univeristy</span></a
+          >
         </div>
-      </nav>
-  
+        <ul class="navMenu">
+          <li id="navMenuItems"><a href="#">Courses</a></li>
+          <li id="navMenuItems"><a href="#">Why Recruit</a></li>
+          <li id="navMenuItems"><a href="#">Recruitment process</a></li>
+          <li id="navMenuItems"><a href="blog.html">Blog</a></li>
+          <li id="navMenuItems">
+            <a href="user.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+        </ul>
+        <div class="menuIcon"><i class="fa-solid fa-bars fa-xl menui"></i></div>
+      </div>
+    </nav>
 
     <div class="container_">
-        <div class="courses-header">
-            <h1>Courses to Help You Get Placed</h1>
-            <p>Explore our curated list of courses designed to enhance your skills and boost your chances of securing a job.</p>
+      <div class="courses-header">
+        <h1>Courses to Help You Get Placed</h1>
+        <p>
+          Explore our curated list of courses designed to enhance your skills
+          and boost your chances of securing a job.
+        </p>
+      </div>
+      <div class="courses-grid">
+        <div class="course-card">
+          <img
+            src="images/courses/course1.jpeg"
+            alt="Resume Building and Interview Skills"
+          />
+          <h2>Resume Building and Interview Skills</h2>
+          <p>
+            Learn how to create a compelling resume and develop strong interview
+            skills that will help you stand out to recruiters.
+          </p>
+          <a href="https://youtu.be/Tt08KmFfIYQ?feature=shared target='_blank"
+            >Learn More</a
+          >
         </div>
-        <div class="courses-grid">
-            <div class="course-card">
-                <img src="images/courses/course1.jpeg" alt="Resume Building and Interview Skills">
-                <h2>Resume Building and Interview Skills</h2>
-                <p>Learn how to create a compelling resume and develop strong interview skills that will help you stand out to recruiters.</p>
-                <a href="https://youtu.be/Tt08KmFfIYQ?feature=shared target="_blank">Learn More</a>
-            </div>
-            <div class="course-card">
-                <img src="images/courses/course2.jpeg" alt="Advanced Excel for Data Analysis">
-                <h2>Advanced Excel for Data Analysis</h2>
-                <p>Master Excel with advanced functions and data analysis techniques, a crucial skill in today’s data-driven world.</p>
-                <a href="https://www.youtube.com/watch?v=v2oNWja7M2E&list=PLmejDGrsgFyBCxF37lewZtX6c1kJXyLt3" target="_blank">Learn More</a>
-            </div>
-            <div class="course-card">
-                <img src="images/courses/course3.jpeg" alt="Technical Aptitude Preparation">
-                <h2>Technical Aptitude Preparation</h2>
-                <p>Prepare for technical aptitude tests that are commonly part of placement processes with this comprehensive course.</p>
-                <a href="https://www.youtube.com/watch?v=hlyal4sR0m8&list=PL8p2I9GklV454LdGfDOw0KkNazKuA-6B2" target="_blank">Learn More</a>
-            </div>
-            <div class="course-card">
-                <img src="images/courses/course4.jpeg" alt="Soft Skills and Communication">
-                <h2>Soft Skills and Communication</h2>
-                <p>Develop your soft skills and communication abilities to effectively collaborate in a professional environment.</p>
-                <a href="https://www.youtube.com/watch?v=x60GHpQ8gJk&list=PLWPirh4EWFpFIElSxplDlEhRDZHkBD-0n" target="_blank">Learn More</a>
-            </div>
-            <div class="course-card">
-                <img src="images/courses/course5.png" alt="Data Structures and Algorithms">
-                <h2>Data Structures and Algorithms</h2>
-                <p>Enhance your problem-solving skills by mastering data structures and algorithms, a key requirement for technical roles.</p>
-                <a href="https://www.youtube.com/watch?v=5_5oE5lgrhw&list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi" target="_blank">Learn More</a>
-            </div>
-            <div class="course-card">
-                <img src="images/courses/course6.jpeg" alt="Coding Bootcamp">
-                <h2>Coding Bootcamp</h2>
-                <p>Accelerate your coding skills with this intensive bootcamp that covers the fundamentals and advanced programming concepts.</p>
-                <a href="https://www.youtube.com/watch?v=HqzWCNbX_wg&list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l" target="_blank">Learn More</a>
-            </div>
+        <div class="course-card">
+          <img
+            src="images/courses/course2.jpeg"
+            alt="Advanced Excel for Data Analysis"
+          />
+          <h2>Advanced Excel for Data Analysis</h2>
+          <p>
+            Master Excel with advanced functions and data analysis techniques, a
+            crucial skill in today’s data-driven world.
+          </p>
+          <a
+            href="https://www.youtube.com/watch?v=v2oNWja7M2E&list=PLmejDGrsgFyBCxF37lewZtX6c1kJXyLt3"
+            target="_blank"
+            >Learn More</a
+          >
         </div>
+        <div class="course-card">
+          <img
+            src="images/courses/course3.jpeg"
+            alt="Technical Aptitude Preparation"
+          />
+          <h2>Technical Aptitude Preparation</h2>
+          <p>
+            Prepare for technical aptitude tests that are commonly part of
+            placement processes with this comprehensive course.
+          </p>
+          <a
+            href="https://www.youtube.com/watch?v=hlyal4sR0m8&list=PL8p2I9GklV454LdGfDOw0KkNazKuA-6B2"
+            target="_blank"
+            >Learn More</a
+          >
+        </div>
+        <div class="course-card">
+          <img
+            src="images/courses/course4.jpeg"
+            alt="Soft Skills and Communication"
+          />
+          <h2>Soft Skills and Communication</h2>
+          <p>
+            Develop your soft skills and communication abilities to effectively
+            collaborate in a professional environment.
+          </p>
+          <a
+            href="https://www.youtube.com/watch?v=x60GHpQ8gJk&list=PLWPirh4EWFpFIElSxplDlEhRDZHkBD-0n"
+            target="_blank"
+            >Learn More</a
+          >
+        </div>
+        <div class="course-card">
+          <img
+            src="images/courses/course5.png"
+            alt="Data Structures and Algorithms"
+          />
+          <h2>Data Structures and Algorithms</h2>
+          <p>
+            Enhance your problem-solving skills by mastering data structures and
+            algorithms, a key requirement for technical roles.
+          </p>
+          <a
+            href="https://www.youtube.com/watch?v=5_5oE5lgrhw&list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi"
+            target="_blank"
+            >Learn More</a
+          >
+        </div>
+        <div class="course-card">
+          <img src="images/courses/course6.jpeg" alt="Coding Bootcamp" />
+          <h2>Coding Bootcamp</h2>
+          <p>
+            Accelerate your coding skills with this intensive bootcamp that
+            covers the fundamentals and advanced programming concepts.
+          </p>
+          <a
+            href="https://www.youtube.com/watch?v=HqzWCNbX_wg&list=PLpcSpRrAaOargYaCNYxZCiFIp9YTqEl-l"
+            target="_blank"
+            >Learn More</a
+          >
+        </div>
+      </div>
     </div>
 
-</body>
+    <script>
+      // NAVBAR MENU
+      const menuIcon = document.querySelector(".menuIcon");
+      const menuList = document.querySelector(".navMenu");
+      menuIcon.addEventListener("click", function () {
+        menuList.classList.toggle("hide");
+        console.log(menuList);
+        console.log("click");
+      });
+
+      const menu_i = document.querySelector(".menui");
+      document.addEventListener("click", function (e) {
+        // console.log(e.target);
+        if (
+          e.target !== menuList &&
+          e.target !== menuIcon &&
+          e.target !== menu_i &&
+          menuList.classList.contains("hide")
+        ) {
+          // console.log("here");
+          menuList.classList.toggle("hide");
+        }
+      });
+    </script>
+  </body>
 </html>
