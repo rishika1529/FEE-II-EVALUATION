@@ -90,9 +90,13 @@
   #quickLinks .container {
     flex-wrap: wrap;
     /* background-color: aqua; */
+  }
+}
 
-    .ql {
-      /* border: 2px solid red; */
+@media (width <= 656px) {
+  #two .container {
+    .twoInfo:nth-child(2) {
+      border-top: none;
     }
   }
 }
